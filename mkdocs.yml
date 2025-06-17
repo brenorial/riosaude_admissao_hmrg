@@ -1,0 +1,11 @@
+site_name: Painel de Admissão - HMRG
+site_description: Documentação do projeto de métricas para Power BI - Hospital Municipal Ronaldo Gazolla
+
+theme:
+  name: material  # tema moderno e popular, você pode trocar se quiser
+
+nav:
+  - Início: index.md
+  - Modelagem de Dados: modelagem.md
+  - Métricas: metricas.md
+  - Colunas: colunas_calculadas.md
