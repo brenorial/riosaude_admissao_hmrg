@@ -3,7 +3,7 @@
 📚 Documentação do Projeto Admissão -HMRG
 A documentação completa deste projeto está disponível online e pode ser acessada através do link abaixo:
 
-👉 [Acesse a documentação aqui](https://brenorial.github.io/riosaude_admissao_hmrg/)
+👉 [Acesse a documentação aqui](https://brenorial.github.io/riosaude_pbi_admissao_hmrg/)
 
 
 ## 🎯 Objetivo do Projeto:
