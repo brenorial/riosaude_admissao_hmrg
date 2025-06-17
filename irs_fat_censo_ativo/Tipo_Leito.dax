@@ -1,0 +1,10 @@
+tipo_leito = 
+IF(
+    irs_fat_censo_ativo[leito_extra] = "N", 
+    IF(irs_fat_censo_ativo[leito_estado] = "LIVRE", "OFICIAL LIVRE", "OFICIAL OCUPADO"),
+    IF(
+        irs_fat_censo_ativo[leito_extra] = "S", 
+        IF(irs_fat_censo_ativo[leito_estado] = "LIVRE", "EXTRA LIVRE", "EXTRA OCUPADO"),
+        BLANK()
+    )
+)

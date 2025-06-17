@@ -1,0 +1,9 @@
+Quant Internados CC = 
+CALCULATE(
+    SUM(vw_estatistica_mensal[internado]),
+    FILTER(
+        vw_estatistica_mensal,
+        vw_estatistica_mensal[Enfermarias_HMRG] = "CENTRO CIRÚRGICO" &&
+        NOT(ISBLANK(vw_estatistica_mensal[internado]))
+    )
+)

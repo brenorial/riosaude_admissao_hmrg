@@ -1,0 +1,5 @@
+Quant Internados = 
+CALCULATE(
+    SUM(vw_estatistica_mensal[internado]),
+    NOT(ISBLANK(vw_estatistica_mensal[internado]))
+)

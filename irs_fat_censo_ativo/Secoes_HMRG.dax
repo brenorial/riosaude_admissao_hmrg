@@ -1,0 +1,37 @@
+Seções_HMRG = 
+SWITCH(
+    TRUE(),
+
+    'irs_fat_censo_ativo'[secao_nome] IN {
+        "POSTO ASSISTENCIAL 11",
+        "POSTO ASSISTENCIAL 12"
+    }, "CIRURGIA",
+
+    'irs_fat_censo_ativo'[secao_nome] IN {
+        "POSTO ASSISTENCIAL 30",
+        "POSTO ASSISTENCIAL 31",  // CTI inativo, mas ainda categorizado
+        "POSTO ASSISTENCIAL 36",
+        "POSTO ASSISTENCIAL 41",
+        "POSTO ASSISTENCIAL 42",
+        "POSTO ASSISTENCIAL 43",
+        "POSTO ASSISTENCIAL 44"
+    }, "CTI",
+
+    'irs_fat_censo_ativo'[secao_nome] IN {
+        "POSTO ASSISTENCIAL 51",
+        "POSTO ASSISTENCIAL 52",
+        "POSTO ASSISTENCIAL 53",
+        "POSTO ASSISTENCIAL 54",
+        "POSTO ASSISTENCIAL 34",
+        "POSTO ASSISTENCIAL 35",
+        "POSTO ASSISTENCIAL 44",
+        "POSTO ASSISTENCIAL 43",
+        "POSTO ASSISTENCIAL 41",
+        "POSTO ASSISTENCIAL 42",
+        "POSTO ASSISTENCIAL 30",
+        "POSTO ASSISTENCIAL 36",
+        "POSTO ASSISTENCIAL 31"
+    }, "INTERNAÇÃO",
+
+    "Outros"
+)

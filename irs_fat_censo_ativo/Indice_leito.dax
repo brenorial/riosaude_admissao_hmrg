@@ -1,0 +1,16 @@
+indice_leito = 
+VAR unidade_atual = irs_fat_censo_ativo[estabelecimento_gid]
+VAR secao_atual = irs_fat_censo_ativo[secao_nome]
+VAR leito_atual = irs_fat_censo_ativo[leito_nome]
+RETURN
+CALCULATE(
+    COUNTROWS(
+        FILTER(
+            irs_fat_censo_ativo,
+            irs_fat_censo_ativo[estabelecimento_gid] = unidade_atual &&
+            irs_fat_censo_ativo[secao_nome] = secao_atual &&
+            irs_fat_censo_ativo[leito_nome] <= leito_atual
+        )
+    ),
+    ALLEXCEPT(irs_fat_censo_ativo, irs_fat_censo_ativo[estabelecimento_gid], irs_fat_censo_ativo[secao_nome])
+)
